@@ -1,0 +1,14 @@
+# Maven target directory
+/target/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# Build output
+/bin/
+
+# IntelliJ (por si algún compañero usa IntelliJ)
+/.idea/
+*.iml
