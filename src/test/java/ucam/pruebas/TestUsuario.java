@@ -158,7 +158,6 @@ public class TestUsuario {
         assertNull(nueva); // falla porque no es null
     }
 
-    @Disabled("Prueba diseñada para fallar a propósito")
     @Test
     public void testFallo_crearPlaylist2() {
         System.out.println("Ejecutando Test fallo 3...");
