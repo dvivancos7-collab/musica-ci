@@ -150,14 +150,15 @@ public class TestUsuario {
         assertNotSame(lista, lista); // siempre falla
     }
 
-    @Disabled("Prueba diseñada para fallar a propósito")
+    
     @Test
     public void testFallo_crearPlaylist1() {
         System.out.println("Ejecutando Test fallo 2...");
         Playlist nueva = usuario1_gratis.crearPlaylist("Pop");
         assertNull(nueva); // falla porque no es null
     }
-
+    
+    @Disabled("Prueba diseñada para fallar a propósito")
     @Test
     public void testFallo_crearPlaylist2() {
         System.out.println("Ejecutando Test fallo 3...");
