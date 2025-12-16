@@ -139,8 +139,8 @@ public class TestUsuario {
 
     // ------------- TESTS DISEÑADOS PARA FALLAR -------------
     // Los dejamos como en la práctica anterior, pero DESHABILITADOS
-    // para que el pipeline normal (CI) pase. Podrás habilitarlos
-    // para demostrar un caso de fallo en la memoria / vídeo.
+    // para que el pipeline normal (CI) pase. S e pueden habilitar
+    // para demostrar un caso de fallo.
 
     @Disabled("Prueba diseñada para fallar a propósito")
     @Test
@@ -150,7 +150,7 @@ public class TestUsuario {
         assertNotSame(lista, lista); // siempre falla
     }
 
-    @Disabled("Prueba diseñada para fallar a propósito")
+    
     @Test
     public void testFallo_crearPlaylist1() {
         System.out.println("Ejecutando Test fallo 2...");
