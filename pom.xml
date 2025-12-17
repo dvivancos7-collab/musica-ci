@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
@@ -28,6 +28,7 @@
 
     <build>
         <plugins>
+
             <!-- Compilar código con Java 17 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -48,6 +49,36 @@
                     <useModulePath>false</useModulePath>
                 </configuration>
             </plugin>
+
+            <!-- Checkstyle -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <!-- Ruta a tu archivo de configuración -->
+                    <configLocation>Archivo_Configuracion_Checkstyle.xml</configLocation>
+
+                    <!-- Falla el build si hay errores -->
+                    <failsOnError>true</failsOnError>
+
+                    <!-- Muestra errores en consola (útil en GitHub Actions) -->
+                    <consoleOutput>true</consoleOutput>
+
+                    <!-- Codificación -->
+                    <encoding>UTF-8</encoding>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>checkstyle-validation</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
