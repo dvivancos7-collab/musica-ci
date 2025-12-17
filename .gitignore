@@ -1,7 +1,7 @@
 # Maven target directory
 /target/
 
-src/test/java/ucam/pruebas
+/src/test/java/ucam/pruebas
 
 # Eclipse files
 .classpath
